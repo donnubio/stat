@@ -1,0 +1,26 @@
+ Нижче поміняйте значення змінних:
+ msg - текст повідомлення
+ your_name - ваше прізвище
+ file_name - им'я файлу, якщо відправляєте декілька файлів пишіть так file_name = с( 'lab1.Rmd', 'lab2.Rmd') 
+ 
+```{r}
+file_name = 'lab1.Rmd'
+your_name = 'Петренено В.Є.'
+msg = 'ііііфффф hgjgjh jgfhgf hgjhg jjggh gjgjhg jhjjjjjjjjjjj gjhghjj jhgjgjgj jgjgjhg jghgjh'
+
+
+######################
+
+library(telegram.bot)
+TELEGRAM_BOT_TOKEN = '1146434098:AAFz1Sv1I8-ZlUzk4qczUZRZm2WvSh9jIkc'
+TELEGRAM_CHAT_ID='-439484582'
+bot <- Bot(token = TELEGRAM_BOT_TOKEN)
+chat_id <- TELEGRAM_CHAT_ID 
+msg <- paste0(your_name,'\n',msg)
+for (file_name_ in file_name){
+  file_name_ <- paste0(getwd(), '/', file_name_)
+  bot$sendDocument(chat_id = chat_id, document = file_name_, caption = msg )
+}
+
+```
+
