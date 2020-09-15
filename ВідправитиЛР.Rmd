@@ -1,12 +1,15 @@
  Нижче поміняйте значення змінних:
  msg - текст повідомлення
  your_name - ваше прізвище
- file_name - им'я файлу, якщо відправляєте декілька файлів пишіть так file_name = с( 'lab1.Rmd', 'lab2.Rmd') 
+ file_name - им'я файлу, що потрібно відправити
+ якщо відправляєте один файл пишіть так  file_name = 'lab1.Rmd'
+ або так file_name = с( 'lab1.Rmd')
+ якщо відправляєте декілька файлів пишіть так file_name = с( 'lab1.Rmd', 'lab2.Rmd') 
  
 ```{r}
-file_name = 'lab1.Rmd'
+file_name = c('lab1.Rmd','lab1.html')
 your_name = 'Петренено В.Є.'
-msg = 'ііііфффф hgjgjh jgfhgf hgjhg jjggh gjgjhg jhjjjjjjjjjjj gjhghjj jhgjgjgj jgjgjhg jghgjh'
+msg = 'ddd'
 
 
 ######################
